@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+.flex-container{
+
+     display: flex;
+     width: 100vw;
+     height: 100vh;
+     /* align-items: center; */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left{
+    /* border: 2px solid green; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+    overflow-y: auto;
+      
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo{
+    width : "160px";
+height : "47.06px";
+position: relative;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.right{
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+    width: 50%;
+   align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.center_hr{
+    display: flex;
+    margin-top: 18vh;
+    margin-bottom: 18vh;
+    height: 64vh;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.card{
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 7vh;
+    flex-direction: column;
+}
+
+ .line{
+    display: flex;
+ }
+
+.half_line{
+    width: 150px;
+    height: 0px;
+    margin-top: 20px;
+}
+
+
+.down{
+
+    margin-bottom: 0%;
+    width :50%;
+height : 144px;
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+}
+
+
+.form{
+     
+     margin-top: 20%;
+     display: flex;
+     flex-direction: column;
+     width:39vw;
+}
+
+
+.input{
+
+    font-size: 22px;
+    margin: 13px 12px 0px 12px;
+    padding: 7px;
+
+}
+
+.btn{
+    background-color: #1F64FF;
+    font-size: 22px;
+    margin: 13px 12px 0px 12px;
+    padding: 7px;
+     color: #FFFFFF;
+     font-weight: bold;
+}
+
+
+.logins{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width: 39vw;
+    margin: auto;
+    margin-top: 20px;
+}
+.OR{
+    margin: auto;
+    margin-top: 15px;
+}
+
+.google{
+    display: flex;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    padding: 0px 14px 0px;
+    margin: 5px 5px 5px 5px;
+    font-weight: 600;
+
+}
+/* media quary for conatainer */
+@media (max-width: 768px) {
+    /* Add your responsive CSS rules here */
+    .right {
+      display: none; /* Example: Stack child divs vertically on small screens */
+    }
+  
+    .center_hr {
+     display: none;
+    }
+    .left ,.card ,.card>.form{
+        width: 97%;
+        /* overflow-y: auto; */
+        /* overflow-x: hidden; */
+    }
+
+
+    .left{
+        overflow-y: auto;
+     }
+   
+     .logins{
+        align-items: center;
+        justify-content: center;
+
+     }
 }
